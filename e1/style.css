@@ -1,0 +1,273 @@
+@font-face{
+  font-family: NoticiaText-Bold;
+  src: url(Mobe/NoticiaText-Bold.woff);
+}
+@font-face{
+  font-family: WorkSans-Medium;
+  src: url(Mobe/WorkSans-Medium.woff);
+}
+@font-face{
+  font-family: WorkSans-Regular;
+  src: url(Mobe/WorkSans-Regular.woff);
+}
+@font-face{
+  font-family: WorkSans-SemiBold;
+  src: url(Mobe/WorkSans-SemiBold.woff);
+}
+
+:root{
+  --bggreen: #043F2E;
+  --lightestgreen: #C8F169;
+  --darkgreen: #2A6B2C;
+  --green: #78C51C;
+  --white: #FFFFFF;
+  --cream: #EEF2E3;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: WorkSans-Regular;
+}
+
+body{
+  background-color: var(--bggreen);
+}
+header{
+  position: relative;
+  width: 1536px;
+  margin: 0 auto;
+}
+
+.flexSpabet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexCenter{
+  display: flex;
+  justify-content: center;
+}
+
+.center{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.inlineBlock{
+  display: inline-block;
+}
+.pop{
+  width: 100%;
+  padding: 5px;
+  background-color: var(--lightestgreen);
+  & p{
+    color: var(--darkgreen);
+    display: inline-block;
+  }
+  & a{
+    color: var(--darkgreen);
+  }
+}
+#popCross{
+  top: 5px;
+  right: 20px;
+  color: var(--darkgreen)
+}
+.container1{
+  width:1440px;
+  margin: 0 auto;
+}
+
+.navBg{
+  background-color: var(--cream);
+  border-radius: 0px 0px 20px 20px;
+  & > div{
+    padding: 10px 10px;
+  }
+}
+
+.navLinks{
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  & ul{
+    display: flex;
+  }
+  & li{
+    display: inline-block;
+  }
+  & a{
+    padding: 10px;
+    display: inline-block;
+    color: var(--bggreen);
+    text-decoration: none;
+  }
+}
+
+.navBtns{
+  & li{
+    display: inline-block;
+  }
+  & li:last-child{
+    margin-left: 5px;
+  }
+  & a{
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+}
+
+#navSignIn{
+  border: 2px var(--bggreen) solid;
+  color: var(--bggreen)
+}
+
+#navTry{
+  background-color: var(--bggreen);
+  border: 2px var(--bggreen) solid;
+  color: var(--lightestgreen);
+}
+
+.container2{
+  width: 1240px;
+  margin: 0 auto;
+}
+.mainDiv{
+  padding: 50px 0;
+}
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  /* column-gap: 12px; */
+}
+
+
+.mainHead{
+  color: var(--bggreen);
+  background-color: var(--lightestgreen);
+  padding: 10px 20px;
+  & p{
+    text-align: center;
+    font-family: NoticiaText-Bold;
+    font-size: 80px;
+  }
+  position: relative;
+  z-index: 200;
+}
+
+.topHead{
+  grid-column: 1/6;
+  grid-row: 1 / 2;
+  border-radius: 30px 30px  0 30px ;
+}
+.midHead{
+  grid-column: 3/ 6;
+  grid-row: 2 / 3;
+  border-radius: 0 0 0 30px;
+  & p{
+    text-align: left;
+  }
+}
+.lowHead{
+  grid-column: 5 / 13;
+  grid-row: 3 / 4;
+  border-radius: 0 30px 30px 30px;
+}
+
+.mainProgress{
+  padding: 0 0 30px 30px;
+  grid-column: 6/13;
+  grid-row: 1 / 3;
+  & p{
+    font-size: 40px;
+    color: var(--lightestgreen);
+  }
+  & span{
+    display: block;
+    font-size: 20px;
+    color: var(--lightestgreen);
+    & i{
+      display: inline;
+      vertical-align: middle;
+    }
+  }
+  & div{
+    background-color: var(--darkgreen);
+    padding: 20px;
+    border-radius: 30px;
+    height: 260px;
+  }
+  & img{
+    display: block;
+    width: 220px;
+    bottom: 30px;
+  }
+}
+
+.mainDesc{
+  grid-column: 5 / 13;
+  grid-row: 4 / 5;
+  & p{
+    padding: 30px 0;
+    color: var(--cream);
+  }
+}
+
+.mainBtns{
+  & li{
+    display: inline-block;
+  }
+  & a{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  & li:last-child{
+    padding-left: 20px;
+  }
+}
+
+#mainDemo{
+  border: 1px var(--cream) solid;
+  color: var(--cream);
+}
+#mainTry{
+  border: 1px var(--white) solid;
+  color: var(--bggreen);
+  background-color: var(--white);
+}
+
+.hero{
+  top: 25px;
+  grid-column: 1 / 5;
+  grid-row: 2/ 5;
+  & img{
+    z-index: 1;
+  }
+}
+.cover{
+  background-color: var(--bggreen);
+  width: 400px;
+  height: 145px;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 30px; 
+}
+
+
